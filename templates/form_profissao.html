@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>{{ titulo }}</h1>
+        </div>
+        <form action="/saida_profissao" method="post">
+            <fieldset>
+                <div class="form-group">
+                    <label for="cod_profissao">Código da Profissão</label>
+                    <input type="text" id="cod_profissao" name="cod_profissao" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="profissao">Profissão</label>
+                    <input type="text" id="profissao" name="profissao" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" class="form-control" required>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

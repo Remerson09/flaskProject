@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>{{ titulo }}</h1>
+        </div>
+        <ul>
+            {% for pessoa in pessoas %}
+                <li>{{ pessoa.nome }} - CPF: {{ pessoa.cpf }} - Endereço: {{ pessoa.endereco }}</li>
+            {% else %}
+                <li>Nenhuma pessoa cadastrada.</li>
+            {% endfor %}
+        </ul>
+        <a href="/form">Adicionar Nova Pessoa</a>
+    </div>
+</body>
+</html>
